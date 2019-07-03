@@ -1,9 +1,8 @@
-import 'hybrids/shim';
 import {
   define
 } from 'hybrids';
 import styles from '../dist/style.css';
-import cytoscape from 'cytoscape';
+import cytoscape from '../component-dist/cytoscape.cjs.min.js';
 /* Add any additional library imports you may need here. */
 
 
@@ -40,7 +39,9 @@ function initComponent(options) {
     set: () => {}, //required to stop TypeError: setting getter-only property "x"
     connect: (host, key) => {
       host[key] = cytoscape({
-        container: host,
+
+        container: host, // container to render in
+      
         elements: [ // list of graph elements to start with
           { // node a
             data: { id: host.getAttribute("data-a") }
@@ -49,7 +50,7 @@ function initComponent(options) {
             data: { id: host.getAttribute("data-b") }
           },
           { // edge ab
-            data: { id: host.getAttribute("data-ab"), source: host.getAttribute("data-a"), target: host.getAttribute("data-b") }
+            data: { id: 'ab', source: 'a', target: 'b' }
           }
         ],
       

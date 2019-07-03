@@ -6,7 +6,8 @@
   <title>Cytoscape Web Component</title>
   <link rel="icon" href="../img/favicon.png">
   <!-- the library for the webcomponent -->
-  <script src="../component-dist/cytoscape.min.js" type="module"></script>
+  <link rel="stylesheet" type="text/css" href="../dist/style.css">
+  <script src="../dist/bundle.js" type="module"></script>
   <style>
   /* here's some basic styling for the demo pages. It's included embedded in the
   page HTML so that it doesn't accidentally end up inside your component ;) */
@@ -25,9 +26,7 @@
 
   <h1>Cytoscape Web Component demo</h1>
 
-  <!-- the geneId param below can be removed if needed - it's just an example of
-       how to pass values to the component's JS behaviours. -->
-  <cytoscape-web data-a="a" data-b="b" data-ab="ab"></cytoscape-web>
+  <cytoscape-web data-a="a" data-b="b" class="CytoscapeWebComponent"></cytoscape-web>
 
 </body>
 

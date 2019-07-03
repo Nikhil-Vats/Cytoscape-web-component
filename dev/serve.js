@@ -1,6 +1,6 @@
 var express = require('express');
 var serveStatic = require('serve-static');
-var port = 3456;
+var port = 3452;
 
 var app = express();
 
