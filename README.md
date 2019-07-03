@@ -1,12 +1,22 @@
 #  Cytoscape Web Component
 
-FIXME: fill out a description of your tool here! :)
+Implements [Cytoscape]() as a web component.
+
+Graph theory (network) library for visualisation and analysis : http://js.cytoscape.org
 
 ## Component user docs: adding this component to your webpage
 
 Hey! If you'd like to use this component on your webpage, please do the following:
 
+Quickstart: There's a demo of this component [here](https://nikhil-vats.github.io/Cytoscape-web-component/examples/index.html). The complete method is given below -
+
 ### In the `<head>`, add:
+
+The bundle.js file is in the dist folder of this repository. You can download it in your project using [curl](https://curl.haxx.se/download.html) -
+
+```bash
+curl -O https://github.com/Nikhil-Vats/Cytoscape-web-component/blob/master/dist/bundle.js
+```
 ```html
 <!-- the library for the webcomponent -->
 <script src="dist/bundle.js" type="module"></script>
@@ -19,19 +29,9 @@ This links to the relevant scripts to define the component and fetch data.
 Where you want your WebComponent to appear, add the following:
 
 ```html
-<cytoscape-web
-   geneId="BRCA1">
+<cytoscape-web attribute="value">
  </cytoscape-web>
 ```
-
-Some notes on usage:
-
-- `geneId` value must must be an identifier for a gene. You can replace it
-with your favourite gene id instead!
-
-
-## Licence
-
 
 ## Developer docs
 
@@ -72,6 +72,8 @@ To serve your page at [http://localhost:3456](http://localhost:3456):
 ```bash
 npm run server
 ```
-#### Example comonent
+#### Example component
 To see a demo component implemented similarly to this component, visit
 [biojs-webcomponent-prototype](https://github.com/yochannah/biojs-webcomponent-prototype).
+
+This uses [hybrids.js](https://github.com/hybridsjs/hybrids) to implement webcomponents easily.
